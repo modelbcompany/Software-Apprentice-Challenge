@@ -16,15 +16,14 @@ code {
     monospace;
 }
 
+.card-container {
+  width: 500px;
+  padding: 10px;
+}
+
 .card-box {
   border: 1px solid #000;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   text-align: center;
 }
-
-.card-container {
-  width: 200px;
-  padding: 50px
-}
-
