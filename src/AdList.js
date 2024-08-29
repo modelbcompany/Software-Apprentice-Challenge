@@ -12,14 +12,13 @@ function AdList({adData}) {
     function handleSort(e) {
         setSortInput(e.target.value)
     }
-    
-    // console.log(Array.isArray(adData.facebook_ads))
 
+    const facebookList= adData.facebook_ads
+    const twitterList= adData.twitter_ads
+    const snapchatList= adData.snapchat_ads
     const googleList= adData.google_analytics
 
-    const masterList= [...adData.facebook_ads, ...adData.twitter_ads, ...adData.snapchat_ads]
-
-    // console.log(masterList)
+    const masterList= [...(facebookList || []), ...(twitterList || []), ...(snapchatList || [])]
 
     let sortedAds= []
 
@@ -38,19 +37,17 @@ function AdList({adData}) {
         return (adObj.campaign_name || adObj.campaign).toLowerCase().includes(searchInput.toLowerCase())
     })
 
-    // console.log(filteredAds)
-
     const adCards= filteredAds.map(adObj => {
         return <AdCard adObj= {adObj} googleList= {googleList}/>
     })
 
     return(
-        <div className= 'card-container'>
+        <div>
             <div className= 'search-sort-container'>
                 <div className= 'container'>
                     <input
                         type="text"
-                        className="search"
+                        className="search-box"
                         placeholder="Search campaign name..."
                         value={searchInput}
                         onChange={handleSearchInput}
@@ -65,7 +62,9 @@ function AdList({adData}) {
                         </select>
                 </div>
             </div>
-            {adCards}
+            <div className= 'ad-cards-container'>
+                {adCards}
+            </div>
         </div>
     )
 }

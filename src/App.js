@@ -18,7 +18,7 @@ function App() {
   }, [])
 
   return (
-    <div>
+    <div className= 'app-container'>
       <AdList adData= {adData}/>
     </div>
   );
