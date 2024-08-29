@@ -7,7 +7,7 @@ function AdCard({adObj, googleList}) {
     }
     return(
         <div className="card-box">
-            <p>Campain: {adObj.campaign_name || adObj.campaign}</p>
+            <p className="campaign-title">{adObj.campaign_name || adObj.campaign}</p>
             <p>Adset: {adObj.media_buy_name || adObj.ad_group || adObj.ad_squad_name}</p>
             <p>Creative: {adObj.ad_name || adObj.image_name || adObj.creative_name}</p>
             <p>Spend: {adObj.spend || adObj.cost}</p>

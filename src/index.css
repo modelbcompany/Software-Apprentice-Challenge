@@ -18,7 +18,7 @@ code {
 }
 
 .app-container{
-    font-family: Arial;
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,7 +38,7 @@ code {
 }
 
 .card-box {
-  border: 1px solid #000;
+  border: 2px solid #000;
   padding: 5px;
   text-align: center;
   width: 270px;
@@ -47,6 +47,12 @@ code {
   border-radius: 8px;
   box-shadow: 0 5px 6px rgba(0,0,0,0.1);
   padding: 15px;
+}
+
+.campaign-title{
+  font-weight: bold;
+  color: darkred;
+  font-size: 18px;
 }
 
 .search-sort-container {
@@ -59,6 +65,7 @@ code {
   margin: auto;
   box-shadow: 0 0 4px white ;
   border-color: black;
+  margin-top: 15px;
 }
 
 .container {
@@ -72,11 +79,14 @@ code {
 }
 
 .search-box {
-  height:20px;
-  width: 400px;
-  font-size:13pt;
+  width: 100%;
+  padding: 3px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  margin-bottom: 4px;
+  background-color: #ffffff;
   text-align: center;
-  background-color: white;
 }
 
 #sort-text {
@@ -89,5 +99,7 @@ code {
   font-size: 11pt;
   padding: 0.2%;
   margin-left: 2%;
-  background-color: gray;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  cursor: pointer
 }
